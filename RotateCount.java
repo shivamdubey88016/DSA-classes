@@ -5,10 +5,12 @@ public class RotateCount {
     int divisor = (int) Math.pow(10, rotateBy);
     int rotationNum= num % divisor;//45
     int remainingNum = num / divisor;//123
-    int digits = (int) Math.log10(num)+1;//count digit of original number
-    int multiplier = (int) Math.pow(10, digits - rotateBy);//1000
-    int rotatedNumber = rotationNum * multiplier + remainingNum;//45123
-    System.out.println("Number after rotation: " + rotatedNumber);  // our output
-
+    int digitsCount = (int) Math.log10(num)+1;//count digit of original number
+     rotateBy=rotateBy % digitsCount;//to handle if rotateBy > digitsCount
+   if(rotateBy<0){
+     rotateBy=rotateBy + digitsCount;
+   }
+    int newNum = rotationNum * (int) Math.pow(10, rotateBy) + remainingNum;
+    System.out.println("Number after rotation: " + newNum);     
   }  
 }
