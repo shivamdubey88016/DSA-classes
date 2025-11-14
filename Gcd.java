@@ -7,8 +7,8 @@ public class Gcd {
         System.out.println("Enter two numbers:");
         int a = sc.nextInt();
         int b = sc.nextInt();
-       int c=a;
-         int d=b;
+        int c = a;
+        int d = b;
         int rem = 0;
         if (a < b && a > 0 && b > 0) {
             rem = b % a;
@@ -33,8 +33,8 @@ public class Gcd {
 
         }
         System.out.println(rem);
-        int lcm=(c*d)/rem;
-        System.out.println("LCM is: "+lcm); 
+        int lcm = (c * d) / rem;
+        System.out.println("LCM is: " + lcm);
 
     }
 
