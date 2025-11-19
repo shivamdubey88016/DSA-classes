@@ -8,7 +8,8 @@ public class Factorial_of_a_NumberByRecursion {
         if(n==0||n==1){
             return 1;
         }
-        return n*factorial(n-1);
+        int result=factorial(n-1);
+        return n*result;
     }
     
 }
